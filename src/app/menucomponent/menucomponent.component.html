@@ -1,0 +1,35 @@
+<h1>Line Chart From CSV</h1>
+<!-- <div class="center">
+<button class="btn btn-outline-dark"  (click)="launchModal(0)" *ngIf= "isAdmin"> Add Menu</button>
+<button class="btn btn-outline-dark"  (click)="launchModal(1)" *ngIf= "!isAdmin" > Order</button>
+</div>
+<ul class="menulist">
+  <li *ngFor ="let menuItem of Menu" class="menuitem">
+    {{menuItem.Name}}
+  </li>
+</ul> -->
+<input type="file" class="file-chooser" accept=".csv"  (change)="onFileChange($event)" #fileInput>
+<div>
+
+  <div class="alert alert-danger" *ngIf = "showErrors">
+   CSV has errors.Please upload proper file.
+  </div>
+
+<ngx-charts-line-chart *ngIf="dataToChart.length"
+[view]="view"
+[scheme]="colorScheme"
+[results]="dataToChart"
+[gradient]="gradient"
+[xAxis]="showXAxis"
+[yAxis]="showYAxis"
+[legend]="showLegend"
+[showXAxisLabel]="showXAxisLabel"
+[showYAxisLabel]="showYAxisLabel"
+[xAxisLabel]="xAxisLabel"
+[yAxisLabel]="yAxisLabel"
+[autoScale]="autoScale"
+[timeline]="timeline"
+>
+</ngx-charts-line-chart>
+
+</div>

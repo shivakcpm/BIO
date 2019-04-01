@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor ="let orderModel of data" class="menuitem">
+        <div class="orderItem">{{orderModel.OrderedBeverage.Name}}</div>
+        <div class="orderBy">{{orderModel.BeverageBarUserFirstName}}</div>
+        <div class="stateChange" *ngIf= "isAdmin" (click)= "changeState(orderModel.BeverageBarOrderId)" >{{title}}</div>
+      </li>
+</ul>

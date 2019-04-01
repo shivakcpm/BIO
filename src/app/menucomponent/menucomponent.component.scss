@@ -1,0 +1,32 @@
+.menuHeader{
+    text-align: center;
+    margin-top: 30px;
+}
+.center{
+    text-align: center;
+    margin-top:20px;
+}
+.h1{
+    margin-bottom: 25px;
+}
+.file-chooser{
+    margin-left: 25%;
+    margin-right: 25%;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.menulist{
+    padding: 15px;
+    .menuitem{
+        margin-top:30px;
+        padding: 10px; 
+        background: hsl(83, 77%, 55%);
+        color: #404051;
+        list-style: none;
+        text-align: center;
+}
+
+}

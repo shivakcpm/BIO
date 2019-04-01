@@ -1,0 +1,24 @@
+<div role="document" class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">{{title}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <input type="text" class="menuInput" required [(ngModel)]="name" placeholder="Please give your name">
+      <input type="number" class="menuInput" required [(ngModel)]="quantity" placeholder="how many" min="1">
+      <select class = "selector" required [(ngModel)] = "bevarage">
+        <option value="">Please Select </option>
+          <option *ngFor= "let menuitem of bevarages" [ngValue]="menuitem.BeverageId">{{menuitem.Name}}</option>
+      </select>
+      <div *ngIf="error" class="danger"> 
+          {{message}}
+      </div> 
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="addItem()">Add</button>
+    </div>
+  </div>
+</div>

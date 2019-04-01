@@ -1,0 +1,16 @@
+<div class="queHeader">BEVERAGE QUE</div>
+<div class="row">
+<div class="col-md-4 col-sm-12 queSection">
+<div class="queTitle">IN THE QUE</div>
+<app-quelistcomponent [data] = "inTheQue" [state]="'que'" [isAdmin]= "isAdmin"></app-quelistcomponent>
+</div>
+<div class="col-md-4 col-sm-12 queSection">
+    <div class="queTitle">BEING MIXED</div>
+    <app-quelistcomponent [data] = "beingMixed" [state]="'mix'" [isAdmin]= "isAdmin"></app-quelistcomponent>
+</div>
+<div class="col-md-4 col-sm-12 queSection">
+    <div class="queTitle">READY TO COLLECT</div>
+    <app-quelistcomponent [data] = "readyToCollect" [state]="'collect'" [isAdmin]= "isAdmin"></app-quelistcomponent>
+</div>
+
+</div>
